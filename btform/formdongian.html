@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sở thích của bạn</title>
+    <link rel="stylesheet" href="dongian.css">     
+</head>
+<body>
+
+<div class="container">
+    <div class="title">SỞ THÍCH CỦA BẠN</div>
+
+    <form action="#">
+        <table>
+            <tr>
+                <td class="label">Họ và tên</td>
+                <td>
+                    <input type="text" name="yourname">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Email</td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Sở thích</td>
+                <td class="hobby">
+                <span class="cb"> <input type="checkbox" name="hobby" value="thethao"> Thể thao </span>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="amnhac"> Âm nhạc </span>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="docsach"> Đọc sách </span>
+                    <br>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="luotweb"> Lướt web </span>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="choigame"> Chơi game </span>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="dienanh"> Điện ảnh </span>
+                    <br>
+                    <span class="cb"> <input type="checkbox" name="hobby" value="dulich"> Du lịch </span>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn">
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

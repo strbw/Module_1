@@ -1,0 +1,66 @@
+body {
+    background-color: #ccffff;
+    font-family: Tahoma, Arial, sans-serif;
+     font-size: 14px;
+}
+
+.container {
+    width: 700px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border: 3px solid #116a6a;
+}
+
+.title {
+    background-color: rgb(251, 55, 16);
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+.label {
+    color: blue;
+    font-weight: bold;
+    width: 90px;
+    text-align: right;
+    padding-right: 20px;   
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 95%;
+    height: 30px;
+}
+
+.hobby {
+    color: rgb(217, 105, 35);
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 1px 5px;
+    font-size: 16px;
+}
+.cb {
+    display: inline-block;
+    width: 110px;
+}
