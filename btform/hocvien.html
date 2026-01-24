@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí học viên</title>
+    <link rel="stylesheet" href="hocvien.css">
+</head>
+<body>
+<div class ="container"> 
+    <div class= "title">ĐĂNG KÍ HỌC VIÊN</div>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td class ="label">Họ và tên</td>
+                <td>
+                    <input type="text" name="yourname">
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="label">Ngày sinh</td>
+                <td>
+                    <input type="date" name="birthday">
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "label">Giới tính</td>
+                <td>
+                    <input type = "radio" name ="gender" > Nam 
+                    <input type ="radio" name = "gender" > Nữ
+                </td>
+            </tr>
+            <tr>
+                <td  class = "label">Địa chỉ </td>
+                <td >
+                    <!--<input type="text" name="address"> -->
+                    <textarea name="address"></textarea>
+
+                </td>
+            </tr>
+        
+            <tr>
+                <td class =" label">Lớp</td>
+                <td>
+                <select name = "class">
+                    <option>-- Chọn lớp --</option>
+                    <option>12A1</option>
+                    <option>12A2</option>
+                    <option>12A3</option>
+                </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "label"> Email</td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "label">Điện thoại</td>
+                <td>
+                    <input type="tel" name="phone">
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn">
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</div>
+</body>
+</html>

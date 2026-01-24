@@ -1,0 +1,87 @@
+/* nền trang */
+body {
+    background-color: #ffff99; /* vàng nhạt */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* khung form */
+.container {
+    width: 750px;
+    margin: 30px auto;
+    background-color: #ffff99;
+    padding: 15px 20px 30px;
+}
+
+/* tiêu đề */
+.title {
+    background-color: #ccffcc; /* xanh nhạt */
+    color: blue;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+/* bảng */
+table {
+    width: 100%;
+}
+
+/* ô trái (label) */
+.label {
+    color: blue;
+    font-weight: bold;
+    width: 150px;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+/* ô nhập */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 400px;
+    height: 28px;
+    border: 2px inset #999;
+}
+
+textarea {
+    width: 400px;
+    height: 90px;
+    border: 2px solid #333;   /* viền rõ */
+    padding: 5px;
+    font-family: Arial;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+
+/* radio */
+input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* select lớp */
+select {
+    width: 180px;
+    height: 28px;
+    border: 2px inset #999;
+}
+
+/* nút */
+.btn {
+    margin-top: 20px;
+    padding-left: 150px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 9px 18px;
+    font-size: 16px;
+    margin-right: 12px;
+    border: 2px outset #ccc;
+}
