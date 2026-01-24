@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel = "stylesheet" href = "survey.css">
+    </head>
+<body>
+<form class = "survey-form">
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+
+    <div class = "form-group">
+        <label>What is your age range?</label> <br>
+        <select id = "age-range" name = "age-range">
+            <option >18-24</option>
+            <option >25-34</option>
+            <option >35-50</option>
+            <option >50+</option>
+        </select>
+    </div>
+
+    <div class = "form-group">
+        <label>What is your yearly income range?</label><br>
+        <select id = "income-range" name = "income-range">
+            <option >$0 - $25,000</option>
+            <option >$25,001 - $50,000</option>
+            <option >$50,001 - $100,000</option>
+            <option >$100,000+</option>
+        </select>
+    </div>
+
+    <div class = "form-group">
+        <label>Gender Identity</label> <br>
+        <label><input type="radio" name="gender"> Male</label> <br>
+        <label><input type="radio" name="gender"> Female</label> <br>
+        <label><input type="radio" name="gender"> Nonbinary</label> <br>
+        <label>
+            <input type ="radio" name = gender> other <br>
+            <input type = text class = "small-input"/>
+        </label>
+    </div>
+
+    <div class = "form-group">
+        <label>Which products have you purchased in the last 2 months</label> <br>
+        <label><input type = "checkbox" name = "products"/>Products 1</label> <br>
+        <label><input type = "checkbox" name = "products"/>Products 2</label> <br>
+        <label><input type = "checkbox" name = "products"/>Products 3</label> <br>
+    </div>
+
+    <div class = "form-group">
+        <label>How often would you use our new product?</label> <br>
+        <label><input type ="radio" name="time" /> Daily</label> <br>
+        <label><input type ="radio" name="time" /> Weekly</label>  <br>
+        <label><input type ="radio" name="time" /> Monthly</label>  <br>
+    </div>
+
+    <div class = "form-group">
+        <label>What would you pay for the new product?</label>
+              <span>$</span>
+                <input type = "number" class = "money" pattern="[0-9]"> . <input type="number" class="money"> <br>
+                <small>Dollars</small>  <small>Cents</small>
+           </div>
+            
+</form>
+</body>
+</html>

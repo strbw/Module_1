@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f7;
+}
+
+.survey-form {
+    width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+p {
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+select,
+input[type="number"] {
+    padding: 6px;
+    width: 250px;
+}
+
+input[type="text"]{
+    padding: 6px;
+    width: 150px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.small-input {
+    width: 120px;
+    margin-left: 30px;
+}
+
+.price {
+    margin-top: 8px;
+}
+
+.money {
+    width: 70px;
+}
+
+small {
+    color: #666;
+    font-size: 30px;
+    padding: 0px 5px;
+}
+
+
+/* input tiền */
+.money {
+    width: 80px;
+    padding: 6px;
+}
+
+/* chữ Dollars / Cents */
+.form-group small {
+    display: inline-block;
+    width: 80px;
+    font-size: 24px;   /* sửa từ 30px xuống */
+    color: #666;
+    text-align: right;
+}
+
+/* đẩy chữ Cents sang đúng vị trí ô thứ 2 */
+.form-group small:last-child {
+    padding-left: 173px;
+    
+}
