@@ -1,0 +1,65 @@
+.weekday {
+    background: orange;
+    color: white;
+}
+
+.sun {
+    background: red;
+    color: white;
+}
+
+.sat {
+    background: blue;
+    color: white;
+}
+
+span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* hàng Sun Mon Tue */
+.sub-header td {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 6px;
+    font-weight: bold;
+}
+
+/* Sun chữ đỏ */
+td.sun-text {
+    color: red ;
+}
+
+/* Sat chữ xanh */
+td.sat-text {
+    color: blue;
+}
+
+.den{
+    color: black;
+}
+sub {
+    font-size: 12px;
+}
+.calender{
+    border-collapse: collapse;   /* gộp viền */
+}
+
+tr.day td {
+    border: 1px solid #b5b5b5;
+    width: 90px;
+    height: 49px;
+    text-align: left;
+    vertical-align: top;
+    padding: 6px;
+    text-align: center;
+}
+
+p{
+    padding-left: 270px;
+    font-size: 23px;
+    font-weight: bold;
+}
