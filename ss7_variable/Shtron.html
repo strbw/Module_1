@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset="UTF-8">
+    <title>Diện Tích</title>
+   
+<body>
+<form>
+    <label for = "R"> </label>
+    <input type = "text" id ="R" placeholder= "Bán kính" > 
+    <input type = "button", value = "Nhập" onclick="Dien_tich()"> 
+    <p id="kq"></p>
+</form>
+<script>
+    function Dien_tich() {
+    let r = document.getElementById("R").value;
+    
+ 
+    if (isNaN(r) || r <= 0) {
+        alert("Nhập số R:");
+        return;
+    }
+     let S = Math.PI * r * r;
+
+     document.getElementById("kq").innerHTML =
+     "Diện tích: " + S.toFixed(2);
+}
+</script>
+</body>
+</html>

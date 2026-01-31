@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset="UTF-8">
+    <title>Chuyển_đổi</title>
+   
+<body>
+<form>
+    <label for = "độ.C"> </label>
+    <input type = "text" id ="độ.C" placeholder= " Độ c (Celsius)" > 
+    <input type = "button", value = "Nhập" onclick="độ_F()"> 
+    <p id="kq"></p>
+</form>
+<script>
+    function độ_F() {
+    let c = document.getElementById("độ.C").value;
+    
+ 
+    if (isNaN(c)) {
+        alert("Nhập số đi bạn ơi 😄");
+        return;
+    }
+
+     document.getElementById("kq").innerHTML =
+     "Độ F: " + (c * 9/5 + 32).toFixed(2);
+}
+</script>
+</body>
+</html>

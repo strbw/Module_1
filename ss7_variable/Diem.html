@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset="UTF-8">
+    <title>Nhập điểm</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+<body>
+<form>
+    <label for = "li">Điểm lí </label>
+    <input type = "text" id ="li"  > 
+    <br><br>
+    <label for = "hoa">Điểm hóa</label>
+    <input type = "text" id ="hoa"> 
+    <br><br>
+    <label for = "sinh">Điểm Sinh</label>
+    <input type = "text" id ="sinh" > 
+    <br><br>
+    <input type = "button", value = "Nhập" onclick="TinhDiem()"> 
+    <p id="kq"></p>
+</form>
+<script>
+    function TinhDiem() {
+    let li = document.getElementById("li");
+    let sinh = document.getElementById("sinh");
+    let hoa = document.getElementById("hoa");
+    
+    let dli = parseFloat(li.value);
+    let dHoa = parseFloat(hoa.value);
+    let dSinh = parseFloat(sinh.value);
+ 
+    if (
+        isNaN(dli) || isNaN(dHoa) || isNaN(dSinh) ||
+        dli < 0 || dli > 10 ||
+        dHoa < 0 || dHoa > 10 ||
+        dSinh < 0 || dSinh > 10
+    ) {
+        return;
+    }
+
+   let sum = dli + dHoa + dSinh;
+   let avg = sum / 3;
+
+     document.getElementById("kq").innerHTML =
+        "Tổng: " + sum + "<br>Trung bình: " + avg.toFixed(2);
+}
+</script>
+</body>
+</html>
