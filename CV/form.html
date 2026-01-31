@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Submission</title>
+    </head>
+<body>
+    <h1>Form Submission</h1>
+    <form action ="login" name="form-name">
+        <fieldset>
+            <legend>Personal Information:</legend>
+
+            <label for ="unname">name:</label>
+            <input type = "text" id = "unname" name = "unname"> <br><br>
+
+            <label for ="email">email:</label>
+            <input type = "text" id = "email" name = "email"> <br><br>
+
+            <label for = "dob">dob:</label>
+            <input type = "text" id = "dob" name = "dob"> <br><br>
+
+            <input type = "submit" value =" Submit">
+            <input type = "reset" value =" Reset">
+
+
+        </fieldset>
+    </form>
+
+    <form action = "/action_page.php">
+     First Name: <br>
+     <input type = "text" name = "firstname" value = "Mickey"> <br>
+    Last name: <br>
+   <input type = "text" name = "lastname" value = "Mouse"><br><br>
+    <input type = "submit" value = "Submit">
+    <input type = "reset" value="reset" > 
+</form>
+    
+    <form>
+     <br>
+     <input type= "radio" name = "gender" value = "male" checked > male <br>
+     <input type= "radio" name = "gender" value = "female" checked > female <br>
+  <input type= "radio" name = "gender" value = "other" checked > other 
+</form>
+
+   <input type = "button" onclick= "alert('Hello World!')" value = " Click Me!" >
+
+   <form action ="/action_page" method="get">
+    <label for="fname">First Name:</label>
+    <input type =" text" id = "fname" name = "fname"> <br><br>
+    <label for = "Lname">Last name:</label>
+    <input type=" text" id = "Lname" name = "Lname"> <br><br>
+    <input type = "submit" value = "Submit"> <br><br>
+   </form>
+
+
+     <form action ="/action_page" method="post">
+    <label for="fname">First Name:</label>
+    <input type =" text" id = "fname" name = "fname"> <br><br>
+    <label for = "Lname">Last name:</label>
+    <input type=" text" id = "Lname" name = "Lname"> <br><br>
+    <input type = "submit" value = "Submit"> <br><br>
+   </form>
+
+
+</body>
+</html>

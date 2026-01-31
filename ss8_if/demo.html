@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let avg = +prompt("nhập điểm trung bình");
+ /*   if(avg >=8){
+        alert("Học sinh giỏi")
+    } else if (avg >=6.5){
+        alert("học sinh tiên tiến")
+    } else if (avg >=5){
+        alert("học sinh trung bình")
+    }else if (avg >=3.5){
+        alert("học sinh yếu")
+    }else{
+        alert("học sinh kém")
+    }*/
+    if(avg >= 0 && avg <=100 && !isNaN(avg)) {
+        if (avg >= 8) {
+            alert("Học sinh giỏi")
+        } else if (avg >= 6.5) {
+            alert("học sinh tiên tiến")
+        } else if (avg >= 5) {
+            alert("học sinh trung bình")
+        } else if (avg >= 3.5) {
+            alert("học sinh yếu")
+        } else {
+            alert("học sinh kém")
+        }
+    } else {
+        alert("vui lòng nhập lại là số và năm trong khoảng yêu cầu")
+    }
+</script>
+
 </body>
 </html>

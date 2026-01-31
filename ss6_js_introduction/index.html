@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Title</title>
+    </head>
+<body>
+    <p> Select a new car from the list</p>
+    <select id = "mySelect" onchange = "do_something()" >
+        <option value = "Audi">Audi</option>
+        <option value = "BMW">BMW</option>
+        <option value = "Mercedes">Mercedes</option>
+        <option value = "Toyota">Toyota</option>
+    </select>
+
+    <p onmouseover="mouseover()" onmouseout="mouseout ()" id ="demo"> this is a text </p>
+
+     <p onclick="did_sth()">click me</p>
+
+    <p id = "nemo">Click</p>
+
+     <h2>What Can JavaScript Do?</h2>
+  <p>JavaScript can change HTML attributes.</p>
+  <p>In this case JavaScript changes the src (source) attribute of an image.</p>
+  <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+  <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+  <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+<script>
+    // function do_something(){
+    //     var selected = document.getElementById("mySelect").value;
+    //     alert(selected);
+    // }
+    var selectedElement  = document.getElementById("mySelect");
+    selectedElement.addEventListener("change", changeFuction);
+    function changeFuction(){
+        var selected = document.getElementById("mySelect").value;
+        alert(selected);
+    }
+
+    var demo = document.getElementById("demo");
+    demo.addEventListener("mouseover", mouseover);
+    demo.addEventListener("mouseout", mouseout);
+
+    function mouseover(){
+        document.getElementById("demo").style.color = "blue";
+    }
+    function mouseout(){
+        document.getElementById("demo").style.color = "black";
+    }
+    function did_sth(){
+        alert("hello world!");
+    }
+
+    var nemo = document.getElementById("nemo");
+    nemo.addEventListener("click", clickFunction);
+    function clickFunction(){
+        alert("hello world!");
+    }
+</script>
+</body>
+</html>
+
