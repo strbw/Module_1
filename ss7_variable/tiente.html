@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset="UTF-8">
+    <title>CONVERT</title>
+<body>
+    <form>
+        <label for ="M" >Amount</label>
+        <input type="text" id ="M">
+
+        <label for = "F">From Currency</label>
+        <select id = "F">
+            <option value="VN">VND</option>
+            <option value="US">USD</option>
+        </select>
+
+        <label for = "T">To Currency</label>
+        <select id = "T">
+            <option value="VN">VND</option>
+            <option value="US">USD</option>
+        </select>
+
+        <input type = "button", value = "Nhập" onclick="tien_te()"> 
+    <p id="kq"></p>
+    </form>
+    <script>
+        function tien_te(){
+            let amount = document.getElementById("M").value;
+            let from = document.getElementById("F").value;
+            let to = document.getElementById("T").value;
+
+            const rate = 25000;
+            let result;
+
+           if (isNaN(amount) || amount === "") {
+        document.getElementById("kq").innerText = "Nhập lại số tiền!";
+        return;
+    }
+        mount = parseFloat(amount);
+
+    if (from === to) {
+        result = amount;
+    } 
+    else if (from === "VN" && to === "US") {
+        result = amount / rate;
+    } 
+    else if (from === "US" && to === "VN") {
+        result = amount * rate;
+    }
+
+    document.getElementById("kq").innerText = 
+        "Kết quả: " + result;
+}
+    </script>
+</body>
+
+</html>
