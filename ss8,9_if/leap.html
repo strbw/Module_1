@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhập năm :");
+        let nota = fasle;
+
+        let a4 = a % 4 == 0;
+        if(a4){
+            let a100 = a % 100 ==0;
+            if(a100) {
+                let a400 = a %400 ==0;
+                if(a400){
+                    nota = true;
+                }
+            }
+        }else {
+            nota = true;
+        }
+
+        if(a){
+            alert( a + "is a leap year");
+        } else{
+            alert( a +"is not a leap year")
+        }
+
+
+    </script>
+</body>
+</html>
