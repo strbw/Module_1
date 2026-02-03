@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <input type="text" id = "month">
+   <button type="button" onclick="THANG()">tính số ngày</button>
+   <p id = "re"></p>
+<script>
+function THANG(){
+    let m = +document.getElementById("month").value;
+    switch(m){
+        case  1:
+        case  3:
+        case  5:
+        case  7:
+        case  8:
+        case 10:
+        case  12:
+           document.getElementById("re").innerText = `Tháng ${m} có 31 ngày`;
+        break;
+
+        case  4:
+        case  6:
+        case  9:
+        case  11:
+             document.getElementById("re").innerText = `Tháng ${m} có 30 ngày`;
+        break;
+
+        case  2:
+           document.getElementById("re").innerText = `Tháng ${m} có 28 ngày hoặc 29 ngày`;
+        
+        default:
+            document.getElementById("re").innerText = "Vui lòng nhập tháng từ 1 đến 12";
+ }
+}
+</script>
+</body>
+</html>
