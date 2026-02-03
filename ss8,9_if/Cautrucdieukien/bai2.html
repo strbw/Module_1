@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+<form>
+    <p>Nhập tuổi :</p>
+    <input type ="text" id = "tuổi" placeholder="số tuổi">
+    <button type="button" id = "check" onclick="lop10()">kiểm tra</button>
+    <p id = "re"></p>
+</form>
+<script>
+    function lop10(){
+        let a = +(document.getElementById("tuổi").value);
+        if ( a >= 16){
+            document.getElementById("re").innerText = ` ${a} tuổi: đủ điều kiện vào lớp 10`;
+        }else {
+            document.getElementById("re").innerText = ` ${a} tuổi: không đủ điều kiện vào lớp 10`;
+        }
+    }
+</script>
+</body>
+</html>

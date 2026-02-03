@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    label {
+        display: inline-block;
+        width: 120px;  
+        margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+        width: 150px;
+        padding: 4px;
+    }
+
+    input[type="submit"] {
+        margin-top: 10px;   
+        padding: 6px 12px;
+        width: 150px;
+    }
+
+</style>
+</head>
+<body>
+    <p>Xếp loại học lực</p>
+    <form>
+        <label for = "n1"> Điểm bài kiểm tra </label>
+        <input type="text" id = "n1"  >
+        <br>
+        <label for = "n2">Điểm bài giữa kì</label>
+        <input type="text" id = "n2" >
+        <br>
+        <label for = "n3">Điểm bài cuối kì</label>
+        <input type="text" id = "n3" >
+        <br><br>
+        <button  type = "button"  onclick="HL()">Xếp Loại</button>
+        <br>
+        <p id = "D">ĐTB:</p>
+        <p id = "re">RESULT : </p>
+
+    </form>
+    <script>
+        function HL(){
+            let a = parseFloat(document.getElementById("n1").value);
+            let b =parseFloat(document.getElementById("n2").value);
+            let c =parseFloat(document.getElementById("n3").value);
+            
+            if (isNaN(a) || isNaN(b) || isNaN(c) || a < 0 || b < 0 || c < 0) {
+              document.getElementById("re").innerText = "Vui lòng nhập hợp lê";
+              return;
+            }
+
+            let d = (a + b*2 + c*3) / 6;
+            document.getElementById("D").innerText = ` kết quả là : ${d}`;
+            if( d >= 8.0 ){
+                document.getElementById("re").innerText = "Giỏi của Môn này";
+            } else if ( d >= 6.0) {
+                 document.getElementById("re").innerText = "Khá của Môn này";
+            } else if ( d >= 5.0){
+                 document.getElementById("re").innerText = "Trung bình của Môn này";
+            } else if ( d >= 3.5){
+                 document.getElementById("re").innerText = "Yếu của Môn này";
+            } else {
+                 document.getElementById("re").innerText = "Kém của Môn này";
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

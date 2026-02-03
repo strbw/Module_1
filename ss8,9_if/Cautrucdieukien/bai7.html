@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Cước Phí</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .row {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: inline-block;
+        width: 150px;   /* làm label thẳng hàng */
+    }
+
+    input {
+        width: 160px;
+        padding: 4px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 6px 12px;
+    }
+
+    #result {
+        margin-top: 12px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+     <p>Nộp tiền</p>
+
+     <div class="row">
+     <label for = "T">Phí thuê bao(đồng)</label>
+     <input type="text" id ="T" placeholder="nhập phí">
+     </div>
+
+     <div class="row">
+    <label for="M">Số phút (t)</label>
+    <input type="number" id="M">
+    </div>
+     <button  onclick="CH()">Thành tiền</button>
+     <p id="result">Thành tiền: </p>
+
+<script>
+function CH() {
+    let T = +document.getElementById("T").value;
+    let M = +document.getElementById("M").value;
+    let tong = T
+
+    if (M <= 50){
+        tong += M * 200;
+    } else if ( M > 50 && M <= 200 ){
+           tong += 50 * 200 + (M - 50) * 400;
+    } else {
+          tong += 50 * 200 + 150 * 400 + (M - 200) * 600;
+    }
+      
+    document.getElementById("result").innerText =
+        "Thành tiền: " + tong + " đồng";
+}
+</script>
+
+<body>
+    
+</body>
+</htm>

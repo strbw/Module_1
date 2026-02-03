@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    label {
+        display: inline-block;
+        width: 120px;  
+        margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+        width: 150px;
+        padding: 4px;
+    }
+
+    input[type="submit"] {
+        margin-top: 10px;   
+        padding: 6px 12px;
+        width: 150px;
+    }
+
+</style>
+</head>
+<body>
+    <p>Giá trị lớn nhất</p>
+    <form>
+        <label for = "n1">  1st Number</label>
+        <input type="text" id = "n1"  >
+        <br>
+        <label for = "n2">2nd Number</label>
+        <input type="text" id = "n2" >
+        <br>
+        <label for = "n3">3rd Number</label>
+        <input type="text" id = "n3" >
+        <br><br>
+        <button  type = "button"  onclick="max()">MAXIMUM</button>
+        <br>
+        <p id = "re">RESULT : </p>
+
+    </form>
+    <script>
+        function max(){
+            let a =+(document.getElementById("n1").value);
+            let b =+(document.getElementById("n2").value);
+            let c =+(document.getElementById("n3").value);
+            
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+              document.getElementById("re").innerText = "Vui lòng nhập đủ 3 số";
+              return;
+            }
+
+            if( a >b && a > c){
+                document.getElementById("re").innerText = `${a} là số lớn nhất`;
+            }else if ( b > c){
+                document.getElementById("re").innerText = `${b} là số lớn nhất`;
+            }else {
+             document.getElementById("re").innerText = `${c} là số lớn nhất`;   
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
