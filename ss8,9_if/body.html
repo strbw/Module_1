@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Weight;
+    do{
+       Weight= +prompt("Nhập Weight (kg) :")
+    } while (isNaN(Weight)|| Weight <= 0);
+    
+    let Height;
+    do{
+       Height = +prompt("nhâp Height (m):")
+    } while (isNaN(Height) || Height <= 0);
+    
+    let BMI =  Weight / (Height*Height);
+
+    if (BMI < 18.5) {
+    alert("Underweight");
+    } else if (BMI< 25.0) {
+    alert("Normal");
+    } else if ( BMI< 30.0) {
+    alert("Overweight");
+    } else {
+    alert("Obese");
+}
+
+</script>
+</body>
+</html>
