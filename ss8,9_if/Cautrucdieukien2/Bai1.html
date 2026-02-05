@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let C = +prompt("nhap C:");
+     if (isNaN(C)) {
+        do {
+            C = +prompt("Nhập lại cho đến khi đúng:");
+        } while (isNaN(C));
+    }
+
+        let F;
+        F = C * 9/5 + 32;
+        alert (F);
+    
+</script>
+</body>
+</html>

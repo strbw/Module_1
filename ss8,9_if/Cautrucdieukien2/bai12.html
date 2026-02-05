@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let tienGoc = +prompt("Nhập số tiền ban đầu:");
+    let thang = +prompt("Nhập số tháng gửi:");
+    let laiSuat = +prompt("Nhập lãi suất hàng tháng (%):");
+
+    let tongTien;
+
+    if (isNaN(tienGoc) || isNaN(thang) || isNaN(laiSuat)
+        || tienGoc <= 0 || thang <= 0 || laiSuat < 0) {
+
+        alert("Dữ liệu nhập không hợp lệ");
+
+    } else {
+        laiSuat = laiSuat / 100;   
+        tongTien = tienGoc * Math.pow(1 + laiSuat, thang);
+
+        alert("Tổng tiền sau " + thang + " tháng là: " + tongTien.toFixed(2));
+    }
+</script>
+</body>
+</html>

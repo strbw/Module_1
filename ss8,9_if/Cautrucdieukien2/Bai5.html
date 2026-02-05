@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập cạnh a:");
+    let b = +prompt("Nhập cạnh b:");
+
+    if (!isNaN(a)) {
+        if (!isNaN(b)) {
+            if (a > 0 && b > 0) {
+                let S = a * b / 2;
+                alert("Diện tích tam giác vuông = " + S);
+            } else {
+                alert("a và b phải > 0");
+            }
+        } else {
+            alert("Cạnh b không hợp lệ");
+        }
+    } else {
+        alert("Cạnh a không hợp lệ");
+    }
+</script>
+
+</body>
+</html>

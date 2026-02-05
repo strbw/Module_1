@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế TNCN</title>
+</head>
+<body>
+<script>
+    let thuNhap = +prompt("Nhập thu nhập (triệu VNĐ):");
+    let thue;
+
+    if (isNaN(thuNhap) || thuNhap < 0) {
+        alert("Thu nhập không hợp lệ");
+    } else if (thuNhap <= 5) {
+        thue = thuNhap * 0.05;
+        alert("Thuế phải nộp: " + thue + " triệu");
+    } else if (thuNhap <= 10) {
+        thue = thuNhap * 0.10;
+        alert("Thuế phải nộp: " + thue + " triệu");
+    } else if (thuNhap <= 18) {
+        thue = thuNhap * 0.15;
+        alert("Thuế phải nộp: " + thue + " triệu");
+    } else {
+        thue = thuNhap * 0.20;
+        alert("Thuế phải nộp: " + thue + " triệu");
+    }
+</script>
+</body>
+</html>

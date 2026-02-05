@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .calculator {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        width: 340px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    margin-bottom: 15px;
+   }
+
+   .display input {
+    width: 45px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+   }
+
+    .keys {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #e0e0e0;
+        transition: 0.2s;
+    }
+
+    .btn-clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: span 1;
+    }
+
+    .btn-equal {
+    background: #4caf50;
+    color: white;
+    grid-column: span 2;
+    }
+
+    .result {
+        margin-top: 15px;
+        padding: 10px;
+        background: #f7f7f7;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        min-height: 30px;
+    }
+</style>
+
+</head>
+<body>
+    <div class = "calculator ">
+        <div class = "display">
+            <input  id = "a" placeholder=" a"> .X^2 +
+            <input  id = "b" placeholder=" b" > .X +
+            <input id = "c" placeholder=" c" > = 0
+        </div>
+
+        <div class = "keys">
+            <button onclick="addNum(7)">7</button>
+            <button onclick="addNum(8)">8</button>
+            <button onclick="addNum(9)">9</button>
+
+            <button onclick="addNum(4)">4</button>
+            <button onclick="addNum(5)">5</button>
+            <button onclick="addNum(6)">6</button>
+ 
+            <button onclick="addNum(1)">1</button>
+            <button onclick="addNum(2)">2</button>
+            <button onclick="addNum(3)">3</button>
+
+            <button onclick="addMinus()">-</button>
+            <button onclick="addNum(0)">0</button>
+            <button onclick="addDot()">.</button>
+
+            <button class="btn-clear" onclick="clearAll()">C</button>
+            <button class="btn-equal" onclick="solve()">=</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+<script>
+    let current ;
+
+    document.getElementById("a").onclick = () => current = "a";
+    document.getElementById("b").onclick = () => current = "b";
+    document.getElementById("c").onclick = () => current = "c";
+   
+function addNum(num) {
+        let box = document.getElementById(current);
+        box.value += num;
+    }
+
+    
+function addDot() {
+    let box = document.getElementById(current);
+
+    // nếu chưa có dấu . thì mới cho thêm
+    if (!box.value.includes(".")) {
+        if (box.value === "") {
+            box.value = "0.";
+        } else {
+            box.value += ".";
+        }
+    }
+}
+function addMinus() {
+    let box = document.getElementById(current);
+
+    // chỉ cho dấu - ở đầu
+    if (box.value === "") {
+        box.value = "-";
+    }
+}
+
+
+function clearAll(){
+        document.getElementById("a").value = "";
+        document.getElementById("b").value = "";
+        document.getElementById("c").value = "";
+        document.getElementById("result").innerText = "";
+}
+
+function solve(){
+        let a = +(document.getElementById("a").value);
+        let b = +(document.getElementById("b").value);
+        let c = +(document.getElementById("c").value);
+
+        if ( a == 0 ) {
+			if (b == 0) {
+				if ( c == 0) {
+					document.getElementById("result").innerText = "phuong trinh vo so nghiem";
+				}else {
+					document.getElementById("result").innerText = "phuong trinh vo nghiem";
+				}
+			}else {
+				document.getElementById("result").innerText = "X = " + (-c/b);
+			}
+		} else {
+			let delta = Math.pow(b, 2) - 4*a*c;
+			if (delta < 0) {
+				document.getElementById("result").innerText = "phuong trinh vo nghiem";
+			}else if(delta == 0) {
+				document.getElementById("result").innerText = "X = " +  -b/(2*a) ;
+			}else {
+				document.getElementById("result").innerHTML = "X1 =" + (-b + Math.sqrt(delta))/(2*a) + 
+                "<br>" +  "X2 =" +  (-b - Math.sqrt(delta))/(2*a);
+			}
+		}
+}       
+</script>
+
+</form> 
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let choice = +prompt (
+            "1. chuyển từ mét sang feet\n " +
+            "2. chuyển từ feet sang mét" 
+        )
+        
+        let ft;
+        let m;
+        switch(choice){
+
+            case 1:
+             m = +prompt("nhập mét: ");
+               if (isNaN(m) || m <0) {
+             do {
+             m = +prompt("Nhập lại cho đến khi đúng:");
+             } while (isNaN(m)); }
+               ft = m * 3.2808;
+               alert("kết quả" + ft);
+            break;
+
+            case 2:
+                ft = +prompt("nhập feet :");
+                  if (isNaN(ft) || m < 0) {
+                do {
+                ft = +prompt("Nhập lại cho đến khi đúng:");
+                } while (isNaN(ft));}
+                m = ft / 3.2808;
+                alert("kết quá :" + m);
+                break;
+            
+            default:
+                alert("bạn nhập sai yêu cầu" )
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let kwh = +prompt("Nhập số điện đã dùng:");
+    let tien = 0;
+    let bac;
+
+    if (isNaN(kwh) || kwh < 0) {
+        alert("Nhập sai số điện");
+    } else {
+
+        // xác định bậc (đơn giản)
+        if (kwh <= 50) {
+            bac = 1;
+        } else if (kwh <= 100) {
+            bac = 2;
+        } else {
+            bac = 3;
+        }
+
+        // switch-case
+        switch (bac) {
+            case 1:
+                tien = kwh * 1000;
+                break;
+
+            case 2:
+                tien = kwh * 1500;
+                break;
+
+            case 3:
+                tien = kwh * 2000;
+                break;
+
+            default:
+                alert("Lỗi");
+        }
+
+        alert("Tiền điện: " + tien + " VNĐ");
+    }
+</script>
+</body>
+</html>
